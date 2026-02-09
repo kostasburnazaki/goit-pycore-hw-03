@@ -1,6 +1,7 @@
 from datetime import datetime, timedelta
 
-def get_upcoming_birthdays(users: list[dict]):
+
+def get_upcoming_birthdays(users: list[dict]) -> list[dict]:
     """
     Повертає список користувачів, у яких день народження
     настає протягом наступних 7 днів включно з поточним днем.
@@ -36,4 +37,19 @@ def get_upcoming_birthdays(users: list[dict]):
                 'name': user["name"],
                 'congratulation_date': congratulation_day.strftime("%Y.%m.%d")
             })
+
+    # returns congratulation days with names as a list of dictionaries
     return result
+
+
+def main():
+    users = [
+        {"name": "John Doe", "birthday": "1985.02.13"},
+        {"name": "Jane Smith", "birthday": "1990.02.27"}
+    ]
+    upcoming_birthdays = get_upcoming_birthdays(users)
+    print("Список привітань на цьому тижні:", upcoming_birthdays)
+
+
+if __name__ == "__main__":
+    main()

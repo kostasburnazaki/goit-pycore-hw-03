@@ -1,5 +1,6 @@
 import random
 
+
 def get_numbers_ticket(min: int, max: int, quantity: int) -> list[int]:
     """
     Generates list or unique numbers for the lottery
@@ -25,3 +26,12 @@ def get_numbers_ticket(min: int, max: int, quantity: int) -> list[int]:
 
     # Sorting the result
     return sorted(numbers)
+
+
+def main():
+    lottery_numbers = get_numbers_ticket(1, 49, 6)
+    print("Ваші лотерейні числа:", lottery_numbers)
+
+
+if __name__ == "__main__":
+    main()

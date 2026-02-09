@@ -29,3 +29,13 @@ def get_days_from_today(date_string: str) -> int | str:
     except ValueError:
         # Handle incorrect date format
         return "Invalid date format. Please use 'YYYY-MM-DD'."
+
+
+def main():
+    date_string = "2022-02-24"
+    result = get_days_from_today(date_string)
+    print(result)
+
+
+if __name__ == "__main__":
+    main()
